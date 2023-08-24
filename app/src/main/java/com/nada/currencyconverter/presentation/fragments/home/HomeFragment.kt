@@ -1,0 +1,13 @@
+package com.nada.currencyconverter.presentation.fragments.home
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.nada.currencyconverter.R
+
+class HomeFragment : Fragment() {
+
+
+}
