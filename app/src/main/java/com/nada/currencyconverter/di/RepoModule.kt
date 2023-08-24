@@ -1,4 +1,4 @@
-package com.hamalawey.mealz.di
+package  com.nada.currencyconverter.di
 
 
 import com.nada.currencyconverter.data.remote.ApiInterface

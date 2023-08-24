@@ -2,4 +2,5 @@
     <string name="app_name">CurrencyConverter</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_key">06a636f8399b7f78b91aa8e3849fa038</string>
 </resources>
