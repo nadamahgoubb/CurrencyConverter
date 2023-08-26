@@ -12,6 +12,159 @@
         tools:context=".presentation.fragments.home.HomeFragment">
 
 
+        <?xml version="1.0" encoding="utf-8"?>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/convert_root_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
 
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_last_updated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Last updated at 2020-05-02, 14:15" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_btn"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/text_last_updated">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_from_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="1"
+                        android:minHeight="@dimen/_40sdp"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@id/text_last_updated" />
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/_3sdp"
+                        android:background="@color/grey" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_source_cuurency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:minHeight="@dimen/_50sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@id/text_last_updated" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bg_btn"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/lyt_source">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_to_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="1"
+                        android:minHeight="@dimen/_40sdp"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@id/text_last_updated" />
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/_3sdp"
+                        android:background="@color/grey" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinner_to_cuurency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:minHeight="@dimen/_50sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="@id/text_last_updated" />
+
+
+                </LinearLayout>
+
+
+
+
+                <!--
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/layout_destination_value"
+                                    style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    app:hintEnabled="true"
+                                    app:layout_constraintEnd_toEndOf="@id/layout_dest_currency"
+                                    app:layout_constraintStart_toEndOf="@id/img_switch_currency"
+                                    app:layout_constraintTop_toTopOf="@id/layout_source_value">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/et_destination_amount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="0123456789"
+                                        android:hint="@string/amount"
+                                        android:inputType="numberDecimal" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                 -->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
